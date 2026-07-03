@@ -1,38 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="PACE: Persona Adaptation through Conversational Elicitation in Human-Robot Interaction">
-  <meta property="og:title" content="PACE Framework"/>
-  <meta property="og:description" content="A novel framework for the interactive generation and deployment of structured personas on the Ameca humanoid robot."/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-
-  <meta name="twitter:title" content="ECHO Framework">
-  <meta name="twitter:description" content="Interactive Persona Generation and Deployment in Human-Robot Interaction">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="Human-Robot Interaction, Persona Generation, Embodied AI, Ameca, Large Language Models">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>ECHO: Interactive Persona Generation and Deployment in Human-Robot Interaction</title>
+  <!-- Primary metadata -->
+  <title>PACE: Persona Adaptation through Conversational Elicitation in Human-Robot Interaction</title>
+  <meta name="description" content="PACE is a framework for dynamically eliciting, generating, and deploying psychologically grounded personas on the Ameca humanoid robot through conversational Q&A.">
+  <meta name="keywords" content="PACE, human-robot interaction, humanoid robots, persona adaptation, conversational elicitation, embodied AI, Ameca, large language models, robot persona generation">
+
+  <!-- Open Graph / social preview metadata -->
+  <meta property="og:title" content="PACE: Persona Adaptation through Conversational Elicitation in Human-Robot Interaction">
+  <meta property="og:description" content="Dynamic persona generation and embodied deployment on the Ameca humanoid robot through conversational elicitation.">
+  <meta property="og:url" content="https://pi3-141592653.github.io/PACE/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="static/images/persona_system_overview3.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PACE: Persona Adaptation through Conversational Elicitation">
+  <meta name="twitter:description" content="A framework for interactive persona generation and embodied deployment in human-robot interaction.">
+  <meta name="twitter:image" content="static/images/persona_system_overview3.png">
+
   <link rel="icon" type="image/x-icon" href="static/images/ameca_favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -42,173 +41,196 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 
-  <!-- TODO move to css file -->
   <style>
-    .small-sup {
-        font-size: 0.6em; /* Smaller size */
+    .publication-title {
+      margin-bottom: 1.5rem;
     }
-    .institution-logo {
-            margin-top: 20px; /* top margin */
-            max-width: 175px; /* max width */
-        }
+
+    .publication-subtitle {
+      font-size: 1.25rem;
+      color: #4a4a4a;
+      margin-bottom: 1.25rem;
+    }
+
+    .button-row {
+      margin-top: 1rem;
+    }
+
+    .teaser-video {
+      width: 58%;
+      min-width: 320px;
+      max-width: 720px;
+      margin: 0 auto;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+    }
 
     .image-container {
-        display: flex; /* Use flexbox for layout */
-        justify-content: center; /* Center images horizontally */
-        flex-direction: column; /* Stack images vertically for the paper overview */
-        align-items: center;
-        gap: 40px; /* Space between images */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 48px;
     }
+
     .image-container figure {
-        text-align: center; /* Center the caption */
-        width: 80%; /* Adjust width for figures */
+      width: 90%;
+      text-align: center;
     }
-
-    .image-container figcaption {
-    margin-top: 15px; /* Adds space between the image and caption */
-    font-size: 0.9em;
-
-  }
-  .content {
-    max-width: 100%;    /* Set the maximum width for the caption text */
-    margin: 0 auto;    /* Center the content */
-    line-height: 1.5;  /* Improves readability */
-}
 
     .image-container img {
-        /* width: 459px; Set fixed width */
-        /* height: 220px; Set fixed height */
-        margin-top: 15px; /* top margin */
-        flex-basis: 100%;
-        object-fit: cover; /* Maintain aspect ratio */
+      margin-top: 15px;
+      max-width: 100%;
+      height: auto;
     }
 
     .single-image {
-        flex-basis: 100%; /* Take full width for the single image */
-        margin-top: 20px; /* Space above the single image */
+      display: block;
+      margin: 0 auto;
     }
 
-    .video-container {
-            display: flex; /* Use flexbox for layout */
-            /* justify-content: space-between; Space between videos */
-            /* margin: 20px;  Optional margin */
-        }
-    .video {
-            position: relative; /* Position for watermark */
-            width: 500px; /* Fixed width for the video */
-            margin-right: 20px; /* Right margin for spacing */
-            /* margin: 0 10px;  Optional spacing between videos */
+    .figure-caption {
+      margin-top: 16px;
+      font-size: 0.95em;
+      line-height: 1.5;
     }
-    
-    .video:last-child {
-        margin-right: 0; /* Remove margin for the last video */
+
+    .code-block {
+      text-align: left;
+      white-space: pre-wrap;
+      overflow-x: auto;
+      border-radius: 6px;
+      padding: 1.25rem;
+      background: #f5f5f5;
+      font-size: 0.9rem;
     }
-    
-    video {
-        width: 100%; /* Responsive width */
-        height: auto; /* Maintain aspect ratio */
+
+    @media screen and (max-width: 768px) {
+      .teaser-video {
+        width: 95%;
+      }
+
+      .image-container figure {
+        width: 100%;
+      }
     }
-    .watermark {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        /*bottom: 10px;  Position at bottom */
-        /*right: 10px;  Position at right */
-        background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-        padding: 5px; /* Padding for the watermark */
-        font-size: 14px; /* Font size for the watermark */
-        color: black; /* Text color */
-        /*border-radius: 5px;  Rounded corners */
-    }
-  
-</style>
+  </style>
 </head>
-<body>
 
+<body>
+  <!-- Title -->
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">ECHO: Interactive Persona Generation and Deployment in Human-Robot Interaction</h1>
+            <h1 class="title publication-title pace-title">
+            <span>PACE: Persona Adaptation through</span>
+            <span>Conversational Elicitation in</span>
+            <span>Human-Robot Interaction</span>
+            </h1>
+            <p class="publication-subtitle">
+              Dynamic persona generation and embodied deployment on the Ameca humanoid robot
+            </p>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Anonymous Authors</span>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-     <video id="teaser-video" autoplay controls muted loop style="width: 45%; margin: 0 auto; display: block;">
-        <source src="static/videos/pace_demo.mp4" type="video/mp4">
-     </video>
-      <h2 class="subtitle has-text-centered">
-        <div class="content has-text-centered">
-        <div class="content has-text-justified">
-         Supplementary video demonstrating the ECHO framework running on the Ameca humanoid robot.
-        </div>
-        </div>
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Equipping humanoid robots with coherent and adaptable personas is crucial for fostering natural, engaging, and trustworthy human-robot interaction (HRI). However, existing approaches often rely on static, hard-coded identities that lack the flexibility to adapt to individual user contexts. In this paper, we present ECHO (Embodied Conversational Humanoid Orientation), a novel framework for the interactive generation and deployment of structured personas on the Ameca humanoid robot. 
-            Our system introduces an Interactive Persona Elicitation Pipeline, enabling the robot to dynamically synthesize a tailored, psychologically grounded identity through real-time user Q&A. We detail the Embodied System Integration required to translate this compiled persona—including its values, traits, and situational policies—into expressive, multimodal physical behaviors. Through a comprehensive Empirical HRI Evaluation, we assess the impact of these dynamically generated personas on user trust, perceived anthropomorphism, and interaction quality compared to generic baselines. 
-            Finally, we analyze the framework's Robustness in Physical Environments, highlighting the system's ability to maintain identity coherence despite the latencies, speech-transcription errors, and unstructured inputs inherent to real-world embodied dialogue. These contributions establish a scalable pathway for deploying personalized, interactive, and reliable identities in embodied humanoid assistants.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-<!-- Core figures section based on the PDF -->
-<section class="hero is-small">
-  <div class="hero-body">
+  <!-- Teaser video -->
+  <section class="hero teaser">
     <div class="container is-max-desktop">
-        <div class="image-container">
-          
-          <!-- Figure 1: Motivation -->
-          <figure>
-              <img src="static/images/motivation6.png" alt="Motivation of ECHO framework" class="single-image" style="width: 55%; margin: 0 auto; display: block;">
-              <figcaption> 
-                <div class="content has-text-centered">
-                <div class="content has-text-justified">
-                <strong>Fig. 1.</strong> Motivation and overview of the proposed ECHO framework. When a user asks the Ameca robot to adopt a specific, familiar conversational style, a traditional Static System Prompt offers limited adaptability. In contrast, our proposed Dynamic Persona Prompt Generation pipeline leverages Interactive Q&A to build a comprehensive Persona Elicitation Specification. By extracting key psychological dimensions—Traits, Motivation, Values, Orientation, and Identity—the system performs a Persona Prompt Compilation to generate a structured persona prompt with theory-grounded attributes.
-              </div>
-              </div>
-              </figcaption>
-          </figure>
-          
-          <!-- Figure 2: System Architecture -->
-          <figure>
-            <img src="static/images/persona_system_overview3.png" alt="Overview of ECHO system architecture" class="single-image" style="width: 55%; margin: 0 auto; display: block;">
-            <figcaption> 
-              <div class="content has-text-centered">
-              <div class="content has-text-justified">
-              <strong>Fig. 2.</strong> Overview of the end-to-end system architecture for dynamic persona generation and deployment. The pipeline transitions from (1) Interactive Q&A for initial trait elicitation, to (2) Persona Specification Generation for attribute extraction and transcription, and concludes with (3) Dynamic Persona Activation, which compiles the prompt and executes the physical persona switch on the humanoid hardware.
-            </div>
-            </div>
-            </figcaption>
-        </figure>
-
-        </div>
+      <div class="hero-body">
+        <video id="teaser-video" class="teaser-video" autoplay controls muted loop playsinline>
+          <source src="static/videos/pace_demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem;">
+          Supplementary video demonstrating PACE running on the Ameca humanoid robot.
+        </h2>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+  <!-- End teaser video -->
 
-  </body>
-  </html>
+  <!-- Abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Equipping humanoid robots with coherent and adaptable personas is crucial for fostering natural, engaging, and trustworthy human-robot interaction (HRI). However, existing approaches often rely on static, hard-coded identities that lack the flexibility to adapt to individual user contexts. In this paper, we present PACE (Persona Adaptation through Conversational Elicitation), a novel framework for the interactive generation and deployment of structured personas on the Ameca humanoid robot. Our system introduces an Interactive Persona Elicitation Pipeline, enabling the robot to dynamically synthesize a tailored, psychologically grounded identity through user Q&amp;A. This elicitation process feeds into a persona prompt compilation phase, generating a structured persona prompt built upon multi-perspective dimensions. We detail the Embodied System Integration required to translate this structured specification into expressive, multimodal humanoid behaviors. Through a comprehensive empirical HRI evaluation, we assess the impact of dynamically generated personas on user trust, perceived anthropomorphism, persona consistency, personal relevance, and interaction quality compared to a generic baseline. These contributions establish a scalable pathway for deploying personalized, interactive, and reliable identities in embodied humanoid assistants.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End abstract -->
+
+  <!-- Figures -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="image-container">
+          <figure>
+            <img src="static/images/motivation6.png" alt="Motivation and overview of the PACE framework" class="single-image" style="width: 55%;">
+            <figcaption class="figure-caption">
+              <div class="content has-text-justified">
+                <strong>Fig. 1.</strong> Motivation and overview of the proposed PACE framework. When a user asks the Ameca robot to adopt a specific, familiar conversational style, a traditional static system prompt offers limited adaptability. In contrast, PACE uses Dynamic Persona Prompt Generation: an Interactive Q&amp;A process builds a Persona Elicitation Specification, extracts theory-grounded psychological dimensions, and compiles them into a structured persona prompt that is mapped to embodied robot behavior.
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img src="static/images/persona_system_overview3.png" alt="PACE system architecture overview" class="single-image" style="width: 55%;">
+            <figcaption class="figure-caption">
+              <div class="content has-text-justified">
+                <strong>Fig. 2.</strong> End-to-end system architecture for dynamic persona generation and deployment. PACE transitions from (1) Interactive Q&amp;A for initial trait elicitation, to (2) Persona Specification Generation for transcription and attribute extraction, and finally to (3) Dynamic Persona Activation, which compiles the prompt and executes the physical persona switch on humanoid hardware.
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End figures -->
+
+  <!-- Method summary -->
+  <!-- <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered">Method</h2>
+          <div class="content has-text-justified">
+            <p>
+              PACE first elicits persona-relevant preferences through a short natural language dialogue. The resulting transcript is transformed into a structured <code>PersonaSpec</code> that captures traits, values, motivation, regulatory orientation, identity claims, and situational policies. The structured specification is then compiled into a persona prompt and injected into the robot agent state. During deployment, the robot generates persona-conditioned responses while synchronizing speech with contextually appropriate facial animations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- BibTeX -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-3 has-text-centered">Citation</h2>
+      <pre class="code-block"><code>@inproceedings{pace2026,
+  title     = {PACE: Persona Adaptation through Conversational Elicitation in Human-Robot Interaction},
+  author    = {Anonymous Authors},
+  booktitle = {Proceedings of the IEEE-RAS International Conference on Humanoid Robots},
+  year      = {2026}
+}</code></pre>
+    </div>
+  </section> -->
+</body>
+</html>

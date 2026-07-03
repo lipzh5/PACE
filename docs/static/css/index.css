@@ -145,4 +145,23 @@ body {
   }
 
 
+  .pace-title {
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  line-height: 1.15;
+  font-weight: 700;
+  max-width: 1050px;
+  margin: 0 auto 1rem auto;
+}
+
+.pace-title span {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .pace-title {
+    font-size: clamp(1.8rem, 7vw, 2.6rem);
+  }
+}
+
+
 
