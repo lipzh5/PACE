@@ -8,7 +8,7 @@ This repository accompanies the paper:
 
 > **PACE: Persona Adaptation through Conversational Elicitation in Human-Robot Interaction**
 
-Project page / video demo: https://pi3-141592653.github.io/PACE/
+Project page / video demo: https://anonymous.4open.science/w/PACE-CF28/
 
 ---
 
