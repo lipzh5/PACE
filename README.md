@@ -43,7 +43,7 @@
 ---
 
 <p align="center">
-  <img src="docs/static/images/motivation6.png" width="60%" alt="PACE system architecture overview">
+  <img src="docs/static/images/motivation6.png" width="65%" alt="PACE system architecture overview">
 </p>
 
 
