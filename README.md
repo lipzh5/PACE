@@ -8,7 +8,7 @@ This repository accompanies the paper:
 
 > **PACE: Persona Adaptation through Conversational Elicitation in Human-Robot Interaction**
 
-Project page / video demo: https://anonymous.4open.science/w/PACE-CF28/
+Project page / video demo: https://lipzh5.github.io/PACE/
 
 ---
 
@@ -46,7 +46,7 @@ PACE consists of three main stages:
 PACE follows an end-to-end pipeline that converts natural user speech into a dynamically activated embodied robot persona.
 
 <p align="center">
-  <img src="docs/static/images/persona_system_overview3_blur.png" width="350" alt="PACE system architecture overview">
+  <img src="docs/static/images/persona_system_overview3.png" width="350" alt="PACE system architecture overview">
 </p>
 
 The pipeline consists of three main stages:
