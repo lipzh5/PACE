@@ -3,8 +3,8 @@
 <h1>PACE: Persona Adaptation through Conversational Elicitation in Human-Robot Interaction 🤖</h1>
 
 <div>
-    <a href="https://lipzh5.github.io/" target="_blank">Peizhen Li</a><sup>1*</sup>&emsp;
-    <a href="https://datasciences.org/" target="_blank">Longbing Cao</a><sup>1★</sup>&emsp;
+    <a href="https://lipzh5.github.io/" target="_blank">Peizhen Li</a><sup>1</sup>&emsp;
+    <a href="https://datasciences.org/" target="_blank">Longbing Cao</a><sup>1</sup>&emsp;
     <a href="#" target="_blank">Megani Rajendran</a><sup>2</sup>&emsp;
     <a href="#" target="_blank">Timothy Liu</a><sup>2</sup>&emsp;
     <a href="#" target="_blank">Aik Beng Ng</a><sup>2</sup>&emsp;
@@ -14,10 +14,6 @@
 <div>
     <sup>1</sup>Macquarie University&emsp;
     <sup>2</sup>NVIDIA
-</div>
-<br>
-<div>
-    <sup>*</sup>Project lead&emsp;<sup>★</sup>Advisor
 </div>
 <br>
 <div>
@@ -46,7 +42,10 @@
 
 ---
 
-![PACE system architecture overview](docs/static/images/persona_system_overview3.png)
+<p align="center">
+  <img src="docs/static/images/motivation6.png" width="60%" alt="PACE system architecture overview">
+</p>
+
 
 ## 📰 News
 
@@ -144,11 +143,11 @@ We are actively updating and improving this repository. If you find any bugs or 
 If you find **PACE** useful for your research, welcome to 🌟 this repo and cite our work using the following BibTeX:
 
 ```bibtex
-@inproceedings{li2026pace,
-  title     = {PACE: Persona Adaptation through Conversational Elicitation in Human-Robot Interaction},
-  author    = {Li, Peizhen and Cao, Longbing and Rajendran, Megani and Liu, Timothy and Ng, Aik Beng and See, Simon},
-  booktitle = {IEEE-RAS International Conference on Humanoid Robots (Humanoids)},
-  year      = {2026}
+@article{li2026pace,
+  title={PACE: Persona Adaptation through Conversational Elicitation in Human-Robot Interaction},
+  author={Li, Peizhen and Cao, Longbing and Rajendran, Megani and Liu, Timothy and Ng, Aik Beng and See, Simon},
+  journal={arXiv preprint arXiv:2607.15579},
+  year={2026}
 }
 ```
 
